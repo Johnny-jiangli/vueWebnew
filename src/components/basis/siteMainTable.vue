@@ -1,5 +1,7 @@
 <template>
-  <table class="table">
+  <section>
+    <div class="inner">
+      <table class="table">
       <thead>
         <th>序号</th>
         <th>布防名称</th>
@@ -7,7 +9,7 @@
         <th>算法</th>
         <th>安装地点</th>
         <th>阀值</th>
-        <th>状态</th>
+        <th>开/关</th>
         <th>操作</th>
       </thead>
       <tbody>
@@ -18,7 +20,6 @@
           <td>{{item.deviceALG}}</td>
           <td>{{item.deviceAddress}}</td>
           <td>{{item.deviceFa}}</td>
-
           <td class="td">
             <div class="material-switch pull-right">
               <input id="someSwitchOptionSuccess" name="dd" type="checkbox"/>
@@ -26,11 +27,29 @@
             </div>
           </td>
           <td>
-            <front-panel></front-panel>
+            <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target=".bs-example-modal1">
+              <img src="../../assets/img/index/icon_more.png" alt="">
+              详情
+            </button>
+            <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target=".bs-example-modal2">
+              <img src="../../assets/img/index/icon_edit.png" width="15" alt="">
+              编辑
+            </button>
+            <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target=".bs-example-modal3">
+              <img src="../../assets/img/index/icon_delete.png" width="15" alt="">
+              删除
+            </button>
           </td>
         </tr>
       </tbody>
+    <tfoot>
+      <slot>
+
+      </slot>
+    </tfoot>
     </table>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -76,38 +95,75 @@
 </script>
 
 <style scoped>
-  table{
-    position: relative;
-    background: white;
-    color: #0f0f0f;
+
+  section{
+    box-sizing: border-box;
+    margin: 0 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
   }
-thead{
-  background: #cccccc;
-}
-th,td{
-  height: 80px;
-  line-height: 80px;
+
+  tbody{
+    background: white;
+    color: #7a7e86;
+
+  }
+
+th{
+  height: 60px;
+  line-height: 60px;
   text-align: center;
 }
+tr{
+  text-align: center;
+}
+  section>.inner{
+    height: 690px;
+  }
+  section>.inner{
+    border: #ccc solid 1px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    box-shadow: 0 0 3px #ccc ;
+  }
+  section>.inner>table th{
+    height: 61px;
+    background: #f5f6fa;
+    font-size: 16px;
+    color: #202846;
+  }
+  section>.inner>table tr{
+    color: #7a7e86;
+    font-size: 16px;
+  }
+  button{
+    font-size:16px;
+    color: #7a7e86;
+  }
+  button:hover{
+    background: #465484;
+    color: white;
+  }
+
 .material-switch > input[type="checkbox"] {
   display: none;
 }
-
 .material-switch > label {
   cursor: pointer;
   height: 0px;
   position: relative;
   width: 40px;
 }
-
 .material-switch > label::before {
   background: rgb(0, 0, 0);
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   content: '';
-  height: 25px;
-  margin-top: 1px;
-  margin-left: -130%;
+  height: 23px;
+  margin-top: -10px;
+  margin-left: -150%;
   position:absolute;
   opacity: 0.3;
   transition: all 0.4s ease-in-out;
@@ -120,8 +176,8 @@ th,td{
   content: '';
   height:25px;
   left: -10%;
-  margin-top:0;
-  margin-left: -66%;
+  margin-top:-11px;
+  margin-left: -88%;
   position: absolute;
   top: 0;
   transition: all 0.3s ease-in-out;

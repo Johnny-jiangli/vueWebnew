@@ -1,0 +1,28 @@
+{
+  "code": "10200",
+  "msg": "成功",
+  "count": 0,
+  "data": [
+    {
+      "remark": "1",
+      "createTime": 1531980435000,
+      "createId": null,
+      "updateTime": null,
+      "updateId": null,
+      "deviceId": "1",
+      "mediaId": "1",
+      "deviceName": "1",
+      "deviceModel": "1",
+      "manufacturer": "1",
+      "userName": "1",
+      "password": "1",
+      "ip": "1",
+      "port": "1",
+      "setUpTime": 1531929600000,
+      "channels": 1,
+      "address": "1",
+      "status": "1",
+      "channelNums": null
+    }
+  ]
+}

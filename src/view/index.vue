@@ -1,7 +1,7 @@
 <template>
   <div id="">
-    <site-index-navigation-bar></site-index-navigation-bar>
-    <site-main></site-main>
+    <!--<site-index-navigation-bar></site-index-navigation-bar>-->
+    <!--<site-main></site-main>-->
   </div>
 </template>
 
