@@ -1,10 +1,10 @@
 <template>
-    <!--设备布防管理-->
+
 </template>
 
 <script>
     export default {
-        name: "deploy-defence"
+        name: "test"
     }
 </script>
 
