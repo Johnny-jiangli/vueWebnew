@@ -3,15 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
- Vue.config.productionTip = false
+import iView from 'iview';
+import '../my-theme/index.less'
 import Axios from 'axios'
+Vue.use(iView)
+Vue.config.productionTip = false
 Vue.prototype.$axios = Axios
+Axios.defaults.baseURL = '/api'
 Axios.defaults.headers.post['Content-Type'] = 'application/json';
 
-import iView from 'iview';
-import 'iview/dist/styles/iview.css';
-
-Vue.use(iView)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
